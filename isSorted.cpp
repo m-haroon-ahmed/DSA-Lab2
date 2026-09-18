@@ -49,6 +49,18 @@ void testNegativeValues() {
     cout << "testNegativeValues passed" << endl;
 }
 
+void testEmptyArray() {
+    int arr[] = {};
+    assert(isSorted(arr, 0) == true);
+    cout << "testEmptyArray passed" << endl;
+}
+
+void testAllEqualElements() {
+    int arr[] = {3, 3, 3, 3};
+    assert(isSorted(arr, 4) == true);
+    cout << "testAllEqualElements passed" << endl;
+}
+
 int main() {
     testSortedArray();
     testUnsortedArray();
@@ -56,6 +68,8 @@ int main() {
     testSingleElement();
     testDescendingArray();
     testNegativeValues();
+    testEmptyArray();
+    testAllEqualElements();
     cout << "All tests passed!" << endl;
     return 0;
 }
