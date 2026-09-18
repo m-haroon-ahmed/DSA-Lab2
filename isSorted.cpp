@@ -2,11 +2,15 @@
 #include <cassert>
 using namespace std;
 
-bool isSorted(const int* arr, const int size);   // declared, not implemented yet
+bool isSorted(const int* arr, const int size);   
 
-// --- Temporary stub so the code compiles ---
 bool isSorted(const int* arr, const int size) {
-    return false;   
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void testSortedArray() {
